@@ -1,0 +1,497 @@
+<!--
+DM5212 Scripting 2 Assignment 1
+Name: Dian Nursyuhadah Bte Abdul Rahim      Admin No: 194375B       Date: 13/12/2020      
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <!-- link files -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ose4vpr.css">
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="js/gsap.min.js"></script>
+        <script src="js/TweenMax.min.js"></script>
+        <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+<!--        <script type="text/javascript" src="js/hammer.min.js"></script>-->
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- ALL SCENE -->
+        <div class="all-scene">
+                       
+            <!-- SCENE 1: HOME PAGE -->
+            <div class="scene1" id="firstscene">
+                
+                <!-- hamburger menu -->
+                <img class="btn_ham" src="images/hamburger.svg" alt="Hamburger Menu">
+                
+                <!-- today's data -->
+                <div class="today-data">
+                    <div class="day" data-id=0>Today</div>
+                    <div class="temperature" data-id=0></div>
+                    <div class="weather-icon" data-id=0></div>
+                </div>
+                
+                <!-- section 1 -->
+                <div class="section1">
+                    <img src="images/wave1.svg" alt="Wave">
+                </div>
+                
+                <!-- section 2 -->
+                <div class="section2">
+                    <img src="images/wave2.svg" alt="Wave">
+                </div>
+                
+                <!-- section 3 -->
+                <div class="section3">
+                    <img src="images/personfloat.svg" alt="Person Float">
+                </div>
+                
+                <!-- section 4 -->
+                <div class="section4">
+                    <img src="images/wave3.svg" alt="Wave">
+                </div>
+                
+                <!-- section 5 -->
+                <div class="section5 wave-right">
+                    <img src="images/wave4.svg" alt="Wave">
+                </div>
+    
+                <!-- dropdown -->
+                <div class="dropdown">
+                    <div class="dropdown-arrow"><img src="images/dropdown-arrow.svg" alt="Dropdown"></div>
+                    
+                    <!-- column 1 -->
+                    <div class="weather-content column1">
+                        <div class="day2" data-id=0>Today</div>
+                        <div class="temperature2" data-id=0></div>
+                        <div class="weather-icon2"></div>
+                        <div class="weather-text"></div>
+                    </div>
+                    
+                    <!-- column 2 -->
+                    <div class="weather-content column2">
+                        <div class="day3" data-id=0>Tomorrow</div>
+                        <div class="temperature3" data-id=0></div>
+                        <div class="weather-icon3"></div>
+                        <div class="weather-text2">Sunny</div>
+                    </div>
+                    
+                    <!-- column 3 -->
+                    <div class="weather-content column3">
+                        <div class="day4" data-id=0>Following Day</div>
+                        <div class="temperature4" data-id=0></div>
+                        <div class="weather-icon4"></div>
+                        <div class="weather-text3">Sunny</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCENE 2: LOCATION PAGE -->
+            <div class="scene2" id="secondscene">
+                
+                <!-- hamburger menu -->
+                <img class="btn_ham" src="images/hamburger.svg" alt="Hamburger Menu">
+                
+                <div class="title">Location</div>
+                
+                <!-- wave -->
+                <div class="wave-background">
+                    <img src="images/wavebackground.svg" alt="Wave">
+                </div>
+                
+                <!-- section 6 -->
+                <div class="section6">
+                    <img src="images/float1.svg" alt="Float">
+                    <p>N</p>
+                </div>
+                
+                <!-- section 7 -->
+                <div class="section7">
+                    <img src="images/float2.svg" alt="Float">
+                    <p>W</p>
+                </div>
+                
+                <!-- section 8 -->
+                <div class="section8">
+                    <img src="images/float3.svg" alt="Float">
+                    <p>E</p>
+                </div>
+                
+                <!-- section 9 -->
+                <div class="section9">
+                    <img src="images/float4.svg" alt="Float">
+                    <p>S</p>
+                </div>
+            </div>
+            
+            <!-- SCENE 3: NORTH PAGE -->
+            <div class="scene3" id="thirdscene">
+            
+                <!-- Go Back -->
+                <img class="back" src="images/backarrow.svg" alt="Back">
+                
+                <div class="title2">North</div>
+                
+                <!-- Waves -->
+                <div class="wave-background">
+                    <img src="images/wavebackground.svg" alt="Wave">
+                </div>
+                
+                <div class="section10">
+                    <div class="part1">
+                        <img class="swimming" src="images/yishun.svg" alt="Yishun Swimming Complex">
+
+                        <h2>Yishun Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon,Tues, Thurs, Fri, Sat, Sun &amp; PH:<br> 6.30am to 9.45pm <br>Wednesday: 3.00pm to 9.45pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>351 Yishun Avenue 3 <br>Singapore 769057</p>
+                    </div>
+                    
+                    <div class="part2">
+                        <img class="swimming" src="images/yck.jpg" alt="Yio Chu Kang Swimming Complex">
+
+                        <h2>Yio Chu Kang Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Tues, Wed, Fri, Sat &amp; Sun:<br> 8.00am to 9.30pm <br>Thursday: 8.00am to 2.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>202 Ang Mo Kio Avenue 9 <br>Singapore 569771</p>
+                    </div>
+                    
+                    <div class="part3">
+                        <img class="swimming" src="images/amk.jpg" alt="Ang Mo Kio Swimming Complex">
+
+                        <h2>Ang Mo Kio Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Tues, Thurs, Fri, Sat, Sun &amp; PH: <br>8.00am to 9.30pm <br>Wednesday: 2.30pm to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>1771 Ang Mo Kio Avenue 1 <br>Singapore 569978</p>
+                    </div>
+                    
+                    <div class="part4">
+                        <img class="swimming" src="images/bishan.jpg" alt="Bishan Swimming Complex">
+
+                        <h2>Bishan Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Tues, Wed, Fri, Sat, Sun &amp; PH: <br>8.00am to 9.30pm <br>Thursday: 2.30pm to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>1 Bishan Street 14 <br>Singapore 579778</p>
+                    </div>
+                    
+                    <div class="part5">
+                        <img class="swimming" src="images/tp.jpg" alt="Toa Payoh Swimming Complex">
+
+                        <h2>Toa Payoh Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Wed, Thurs, Fri, Sat, Sun &amp; PH: <br>2.30pm to 9.30pm <br>Tuesday: 2.30pm to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>301 Lorong 6 Toa Payoh <br>Singapore 319392</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCENE 4 -->
+            <div class="scene4" id="fourthscene">
+                <img class="back" src="images/backarrow.svg" alt="Back">
+                
+                <div class="title2">West</div>
+                
+                <div class="wave-background">
+                    <img src="images/wavebackground.svg" alt="Wave">
+                </div>
+                
+                <div class="section11">
+                    <div class="part1">
+                        <img class="swimming" src="images/woodland.jpg" alt="Woodland Swimming Complex">
+
+                        <h2>Woodland Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Tues, Wed, Fri, Sat &amp; Sun:<br> 8.00am to 9.30pm <br>Thursday: 2.30pm to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>3 Woodlands St 13<br>Singapore 738600</p>
+                    </div>
+                    
+                    <div class="part2">
+                        <img class="swimming" src="images/cck.jpg" alt="Choa Chu Kang Swimming Complex">
+
+                        <h2>Choa Chu Kang Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Tues, Wed, Thurs, Fri, Sat &amp; Sun:<br> 8.00am to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>1 Choa Chu Kang Street 53 <br>Singapore 689236</p>
+                    </div>
+                    
+                    <div class="part3">
+                        <img class="swimming" src="images/jurong.jpg" alt="Jurong East Swimming Complex">
+
+                        <h2>Jurong East Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Tues, Wed, Thurs, Fri, Sat, Sun &amp; PH: <br>8.00am to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>21 Jurong East Street 31 <br>Singapore 609517</p>
+                    </div>
+                    
+                    <div class="part4">
+                        <img class="swimming" src="images/jurong2.jpg" alt="Jurong West Swimming Complex">
+
+                        <h2>Jurong West Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Wed, Thurs, Fri, Sat &amp; Sun: <br>8.00am to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>20 Jurong West Street 93<br>Singapore 648965</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCENE 5 -->
+            <div class="scene5" id="fifthscene">
+                <img class="back" src="images/backarrow.svg" alt="Back">
+                
+                <div class="title2">East</div>
+                
+                <div class="wave-background">
+                    <img src="images/wavebackground.svg" alt="Wave">
+                </div>
+                
+                <div class="section12">
+                    <div class="part1">
+                        <img class="swimming" src="images/geylang.jpg" alt="Geylang East Swimming Complex">
+
+                        <h2>Geylang East Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Tues, Wed, Thurs, Fri, Sat, Sun &amp; PH:<br> 8.00am to 9.30pm <br>Monday: 2.30pm to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>601 Aljunied Avenue 1<br>Singapore 389862</p>
+                    </div>
+                    
+                    <div class="part2">
+                        <img class="swimming" src="images/bedok.jpg" alt="Heartbeat @ Bedok Swimming Complex">
+
+                        <h2>Heartbeat @ Bedok Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Tues, Sat &amp; PH:<br> 8.00am to 9.30pm <br>Mon, Wed, Fri &amp; Sun: <br>6.30am to 9.30pm</p>
+                        
+
+                        <h4>Address:</h4>
+
+                        <p>11 Bedok North Street 1 <br>Singapore 469662</p>
+                    </div>
+                    
+                    <div class="part3">
+                        <img class="swimming" src="images/pasirris.jpg" alt="Pasir Ris Swimming Complex">
+
+                        <h2>Pasir Ris Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Tues, Thurs, Fri, Sat, Sun &amp; PH: <br>8.00am to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>120 Pasir Ris Central <br>Singapore 519640</p>
+                    </div>
+                    
+                    <div class="part4">
+                        <img class="swimming" src="images/www.jpg" alt="Wild Wild Wet Water Park">
+
+                        <h2>Wild Wild Wet Water Park</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Wed, Thurs, Fri, Sat &amp; Sun: <br>12.00pm to 6.00pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>1 Pasir Ris Cl <br>Singapore 519599</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCENE 6 -->
+            <div class="scene6" id="sixthscene">
+                <img class="back" src="images/backarrow.svg" alt="Back">
+                
+                <div class="title2">South</div>
+                
+                <div class="wave-background">
+                    <img src="images/wavebackground.svg" alt="Wave">
+                </div>
+                
+                <div class="section13">
+                    <div class="part1">
+                        <img class="swimming" src="images/queenstown.jpg" alt="Queenstown Swimming Complex">
+
+                        <h2>Queenstown Swimming Complex</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Fri, Sun:<br> 8.00am to 9.30pm <br>Wednesday: 2.30pm to 9.30pm</p>
+
+                        <h4>Address:</h4>
+
+                        <p>473 Stirling Road<br>Singapore 148948</p>
+                    </div>
+                    
+                    <div class="part2">
+                        <img class="swimming" src="images/adventurecove.jpg" alt="Adventure Cove">
+
+                        <h2>Adventure Cove Water Park</h2>
+
+                        <h4>Operating Hours:</h4>
+
+                        <p>Mon, Tues, Wed, Thurs, Fri, Sat &amp; Sun:<br> 10.00am to 6.00pm</p>
+                        
+                        <h4>Address:</h4>
+
+                        <p>8 Sentosa Gateway <br>Singapore 098269</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCENE 7 -->
+            <div class="scene7" id="seventhscene">
+                <img class="btn_ham" src="images/hamburger.svg" alt="Hamburger Menu">
+                
+                <div class="title">Safety Tips</div>
+                
+                <div class="section14">
+                    <img src="images/wave7.svg" alt="Wave">
+                </div>
+                
+                <div class="section15">
+                    <img src="images/personswimming.svg" alt="Wave">
+                </div>
+                
+                <div class="section16">
+                    <img src="images/wave8.svg" alt="Wave">
+                </div>
+                
+                <div class="tips">
+                    <div class="tip1">
+                        <div class="number">1.</div>
+                        <div class="tip">Swim in designated areas close to the lifeguards.</div>
+                    </div>
+                    
+                    <div class="tip2">
+                        <div class="number">2.</div>
+                        <div class="tip">Always swim with a friend.</div>
+                    </div>
+                    
+                    <div class="tip3">
+                        <div class="number">3.</div>
+                        <div class="tip">Actively supervise your children whenever around the water.</div>
+                    </div>
+                    
+                    <div class="tip4">
+                    <div class="number">4.</div>
+                    <div class="tip">Drink water regularly even if you are not thirsty.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCENE 8 -->
+            <div class="scene8" id="eighthscene">
+                
+                <!-- Hamburger Menu -->
+                <img class="btn_ham" src="images/hamburger.svg" alt="Hamburger Menu">
+                
+                <div class="title">Equipments</div>
+                
+                <div class="wave-background">
+                    <img src="images/wavebackground.svg" alt="Wave">
+                </div>
+                
+                <div class="items">
+                    <div class="item1">
+                        <img class="object" src="images/goggles.svg" alt="Goggles">
+                        <p>Goggles</p>
+                        <img class="objectp2" src="images/goggles2.svg" alt="Goggles">
+                    </div>
+                    
+                    <div class="item2">
+                        <img class="object" src="images/swimsuit.svg" alt="Swimsuit">
+                        <p>Swimsuit</p>
+                        <img class="objectp2" src="images/swimsuit2.svg" alt="Swimsuit">
+                    </div>
+                    
+                    <div class="item3">
+                        <img class="object" src="images/cloth.svg" alt="Clothes">
+                        <p>Clothes</p>
+                        <img class="objectp2" src="images/cloth2.svg" alt="Clothes">
+                    </div>
+                    
+                    <div class="item4">
+                        <img class="object" src="images/slipper.svg" alt="Slippers">
+                        <p>Slippers</p>
+                        <img class="objectp2" src="images/slipper2.svg" alt="Slippers">
+                    </div>
+                    
+                    <div class="item5">
+                        <img class="object" src="images/toiletries.svg" alt="Toiletries">
+                        <p>Toiletries</p>
+                        <img class="objectp2" src="images/toiletries2.svg" alt="Toiletries">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hamburger-menu">
+                <div class="cross"><img src="images/cross.svg"></div>
+                <div class="nav1 nav">Home</div>
+                <div class="nav2 nav">Location</div>
+                <div class="nav3 nav">Safety Tips</div>
+                <div class="nav4 nav">Equipments</div>
+            </div>
+            
+        </div>
+    </body>
+</html>

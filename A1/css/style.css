@@ -1,0 +1,730 @@
+/*
+DM5212 Scripting 2 Assignment 1
+Name: Dian Nursyuhadah Bte Abdul Rahim      Admin No: 194375B       Date: 13/12/2020      
+*/
+
+/* GLOBAL RESET */
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* IMPORT FONT */
+@font-face 
+{
+    font-family: "JellyCrazies";
+    src: url(../fonts/JellyCrazies.ttf);
+}
+
+/* CHANGE ALL TEXT */
+*
+{
+    font-family: futura-pt, sans-serif;
+}
+
+.all-scene
+{
+    position: relative;
+    width: 432px;
+    height: 720px;
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.all-scene > div
+{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+}
+
+.btn_ham
+{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 40px;
+    position: relative;
+    z-index: 2;
+    float: left;
+}
+
+.today-data
+{
+    float: right;
+    margin-top: 40px;
+}
+
+.day
+{
+    margin-right: 130px;
+    font-size: 42px;
+    font-weight: 100;
+    z-index: 2;
+}
+
+.temperature p
+{
+    position: relative;
+    z-index: 2;
+    font-size: 59px;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+.weather-icon
+{
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    right: 40px;
+}
+
+/* Weather Icons */
+.sunny
+{
+	background-image: url('../images/sunny.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.fair 
+{
+	background-image: url('../images/fair.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.cloudy 
+{
+	background-image: url('../images/cloudy.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.windy 
+{
+	background-image: url('../images/windy.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.rainy 
+{
+	background-image: url('../images/rainy.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.rainyThunderstorm 
+{
+	background-image: url('../images/rainythunderstorm.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 90px;
+	height: 90px;
+}
+
+.thunderstorm 
+{
+	background-image: url('../images/thunderstorm.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.fairNight 
+{
+	background-image: url('../images/fairnight.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.section1 img
+{
+    position: absolute;
+    top: 300px;
+    width: 500px;
+    animation: Wave1 3s infinite;
+}
+
+.section2 img
+{
+    position: absolute;
+    top: 350px;
+    width: 500px;
+    animation: Wave2 3s infinite;
+}
+
+.section3 img
+{
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    width: 290px;
+    animation: Float 3s infinite;
+}
+
+.section4 img
+{
+    position: absolute;
+    top: 450px;
+    width: 500px;
+    animation: Wave1 3s infinite;
+}
+
+.section5 img
+{
+    position: absolute;
+    top: 500px;
+    width: 500px;
+    animation: Wave2 3s infinite;
+}
+
+@keyframes Wave1
+{
+    from
+    {
+        left: -5px;
+    }
+    
+    to
+    {
+        right: -5px;
+    }
+}
+
+@keyframes Wave2
+{
+    from
+    {
+        right: -5px;
+    }
+    
+    to
+    {
+        left: -5px;
+    }
+}
+
+@keyframes Float
+{
+    0%
+    {
+        top: 200px;
+    }
+    
+    50%
+    {
+        top: 210px;
+    }
+    
+    100%
+    {
+        top: 200px;
+    }
+}
+
+.dropdown
+{
+    position: absolute;
+    background: #ce7bb3;
+    top: 615px;
+    width: 100%;
+    height: 450px;
+    border-radius: 30px 30px 0 0;
+    color: white;
+    transition: all 2s;
+}
+
+.dropdown-arrow
+{
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    width: 20px;
+    transition: all 1s;
+}
+
+.dropdown.showup
+{
+    top: 400px;
+    transition: all 2s;
+}
+
+.dropdown-arrow.rotate
+{
+    transform: rotate(180deg);
+    transition: all 1s;
+}
+
+.weather-content
+{
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 11px;
+    margin-left: 40px;
+    width: 320px;
+    height: 70px;
+    border-bottom: 1px solid white;
+}
+
+.column1
+{
+    margin-top: 30px;
+}
+
+.column3
+{
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.day2, .day3, .day4
+{
+    font-size: 18px;
+    margin-right: 20px;
+    width: 110px;
+}
+
+.temperature2 p, .temperature3 p, .temperature4 p
+{
+    font-size: 22px;
+    font-weight: 100;
+    margin-right: 20px;
+    margin-top: 0;
+    width: 50px;
+}
+
+.weather-icon2, .weather-icon3, .weather-icon4
+{
+    width: 45px;
+    margin-right: 15px;
+}
+
+.weather-text, .weather-text2, .weather-text3
+{
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    width: 60px;
+    font-size: 14px;
+}
+
+.weather-text p
+{
+    margin: 0;
+}
+
+/* SCENE 2 */
+.title
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    padding-top: 20px;
+    font-size: 42px;
+    font-weight: 100;
+    position: relative;
+    z-index: 1;
+}
+
+.wave-background img
+{
+    position: absolute;
+    left: 0;
+    width: 400px;
+    animation: Float2 2s infinite;
+}
+
+@keyframes Float2
+{
+    0%
+    {
+        top: 50px;
+    }
+    
+    50%
+    {
+        top: 40px;
+    }
+    
+    100%
+    {
+        top: 50px;
+    }
+}
+
+.section6 img
+{
+    position: absolute;
+    width: 150px;
+    top: 140px;
+    right: 110px;
+}
+
+.section6 p
+{
+    font-family: "JellyCrazies";
+    position: absolute;
+    font-size: 54px;
+    color: #51c9ef;
+    top: 105px;
+    right: 150px;
+}
+
+.section7 img
+{
+    position: absolute;
+    width: 150px;
+    top: 310px;
+    left: 60px;
+}
+
+.section7 p
+{
+    font-family: "JellyCrazies";
+    position: absolute;
+    font-size: 54px;
+    color: #51c9ef;
+    top: 275px;
+    left: 90px;
+}
+
+.section8 img
+{
+    position: absolute;
+    width: 150px;
+    top: 350px;
+    right: 40px;
+}
+
+.section8 p
+{
+    font-family: "JellyCrazies";
+    position: absolute;
+    font-size: 54px;
+    color: #51c9ef;
+    top: 315px;
+    right: 75px;
+}
+
+.section9 img
+{
+    position: absolute;
+    width: 150px;
+    top: 500px;
+    left: 110px;
+}
+
+.section9 p
+{
+    font-family: "JellyCrazies";
+    position: absolute;
+    font-size: 54px;
+    color: #51c9ef;
+    top: 465px;
+    left: 145px;
+}
+
+/* SCENE 3, 4, 5 & 6 */
+.back
+{
+    width: 20px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.title2
+{
+    margin-top: 20px;
+    margin-left: 180px;
+    font-size: 42px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.section10 ,.section11, .section12, .section13
+{
+    width: 72%;
+    margin: 0 auto;
+    height: 652px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+::-webkit-scrollbar 
+{
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.part1
+{
+    margin-top: 30px;
+}
+
+.part1, .part2, .part3, .part4, .part5
+{
+    margin-bottom: 70px;
+}
+
+.swimming
+{
+    height: 236px;
+}
+
+h2
+{
+    font-size: 18px;
+}
+
+h4
+{
+    margin-bottom: 0;
+}
+
+.section10 p.section11 p, .section12 p, .section13 p
+{
+    margin-top: 0;
+    font-size: 16px;
+}
+
+
+/* SCENE 7 */
+.section14 img
+{
+    position: absolute;
+    top: 180px;
+    width: 500px;
+    animation: Wave1 3s infinite;
+}
+
+.section15 img
+{
+    position: absolute;
+    top: 150px;
+    right: 70px;
+    width: 300px;
+    animation: Swim 5s infinite;
+}
+
+@keyframes Swim
+{
+    0%
+    {
+        top: 150px;
+    }
+    
+    50%
+    {
+        top: 120px;
+    }
+    
+    100%
+    {
+        top: 150px;
+    }
+    
+}
+
+.section16 img
+{
+    position: absolute;
+    top: 273px;
+    width: 500px;
+    animation: Wave2 3s infinite;
+}
+
+.tips
+{
+    position: absolute;
+    top: 360px;
+    left: 40px;
+    width: 340px;
+}
+
+.tip1, .tip2, .tip3, .tip4
+{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.number
+{
+    font-family: "JellyCrazies";
+    font-size: 20px;
+    color: #51c9ef;
+    text-align: right;
+    width: 30px;
+}
+
+.tip
+{
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+/* SCENE 8 */
+.items
+{
+    padding-top: 40px;
+    width: 65%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.item1, .item2, .item3, .item4, .item5
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.item2
+{
+    margin-left: 25px;
+}
+
+.item4
+{
+    margin-left: 13px;
+}
+
+.item1 img
+{
+    width: 80px;
+}
+
+.item2 img
+{
+    width: 55px;
+}
+
+.item3 img
+{
+    width: 85px;
+}
+
+.item4 img
+{
+    width: 70px;
+}
+
+.item5 img
+{
+    width: 80px;
+}
+
+.items p
+{
+    font-size: 27px;
+    font-weight: 300;
+}
+
+.object
+{
+    margin-right: 15px;
+    animation: Shake 5s infinite;
+}
+
+.objectp2
+{
+    margin-left: 15px;
+    animation: Shake2 5s infinite;
+}
+
+@keyframes Shake
+{
+    0%
+    {
+        transform: rotate(15deg);
+    }
+    
+    50%
+    {
+        transform: rotate(-15deg);
+    }
+    
+    100%
+    {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes Shake2
+{
+    0%
+    {
+        transform: rotate(-15deg);
+    }
+    
+    50%
+    {
+        transform: rotate(15deg);
+    }
+    
+    100%
+    {
+        transform: rotate(-15deg);
+    }
+}
+
+
+/* Hamburger Menu */
+.all-scene > .hamburger-menu
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    color: white;
+}
+
+.cross img
+{
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    width: 20px;
+}
+
+.nav
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.nav1
+{
+    margin-top: 90px;
+}
+
+
+
+
+
+
+
